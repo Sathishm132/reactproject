@@ -9,6 +9,7 @@ function ExpenseItems(){
                 <div>505 Rs</div>
                 <h2>movies</h2>
                 <div>400 Rs</div>
+                ouwvhfj
             </div>
         </div>
     )
