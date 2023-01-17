@@ -1,15 +1,12 @@
-function ExpenseItems(){
+import './ExpenseItem.css'
+function ExpenseItems(probs){
     return(
-        <div>
-            <h2>expense items!</h2>
-            <div>
-                <h2>food</h2>
-                <div>500 Rs</div>
-                <h2>petrol</h2>
-                <div>505 Rs</div>
-                <h2>movies</h2>
-                <div>400 Rs</div>
-                ouwvhfj
+        <div className='expense-item'>
+            <div>{probs.Date.toISOString()}</div>
+            <div className='expense-item__description'>
+                <h2>{probs.title}</h2>
+                <h2>{probs.place}</h2>
+                <div className='expense-item__price'>{probs.amount}</div>
             </div>
         </div>
     )
