@@ -1,5 +1,8 @@
-import ExpenseItems from "./component/ExpenseItems";
-function App() {
+import ExpenseItems from "./component/expenses/ExpenseItems";
+import './component/expenses/ExpenseItem.css';
+import Card from "./component/uI/Card";
+import './component/expenses/expense.css'
+const App=()=> {
   const expenses = [
     {
       id: 'e1',
@@ -28,23 +31,28 @@ function App() {
   return (
     <div>
       <h2>Let's get started!</h2>
+      
+      <Card className="expense">
       <ExpenseItems title={expenses[0].title}
       amount={expenses[0].amount}
-      Date={expenses[0].date}
+      date={expenses[0].date}
       place={expenses[0].place}></ExpenseItems>
       <ExpenseItems title={expenses[1].title}
       amount={expenses[1].amount}
-      Date={expenses[1].date}
+      date={expenses[1].date}
       place={expenses[1].place}></ExpenseItems>
        <ExpenseItems title={expenses[2].title}
       amount={expenses[2].amount}
-      Date={expenses[2].date}
+      date={expenses[2].date}
       place={expenses[2].place}></ExpenseItems>
        <ExpenseItems title={expenses[3].title}
       amount={expenses[3].amount}
-      Date={expenses[3].date}
+      date={expenses[3].date}
       place={expenses[3].place}></ExpenseItems>
       
+      
+      </Card>
+  
       
       
       
