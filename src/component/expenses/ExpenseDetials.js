@@ -1,5 +1,6 @@
 import './ExpenseItem.css';
 import card from '../uI/Card';
+import
 const ExpenseDetials=(props)=>{
     return(
         <div className='expense-item__description'>

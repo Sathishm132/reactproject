@@ -2,6 +2,7 @@ import ExpenseItems from "./component/expenses/ExpenseItems";
 import './component/expenses/ExpenseItem.css';
 import Card from "./component/uI/Card";
 import './component/expenses/expense.css'
+import Form from "./component/expenses/Vennila";
 const App=()=> {
   const expenses = [
     {
@@ -32,7 +33,9 @@ const App=()=> {
     <div>
       <h2>Let's get started!</h2>
       
+      
       <Card className="expense">
+      <Form className="expense-item"></Form>
       <ExpenseItems title={expenses[0].title}
       amount={expenses[0].amount}
       date={expenses[0].date}
