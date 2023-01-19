@@ -4,6 +4,8 @@ import Card from '../uI/Card';
 import './ExpenseDate.css'
 import ExpenseDetials from './ExpenseDetials';
 import './ExpenseItem.css'
+import Form from '../EventExpense/NewExpenseform';
+
 const ExpenseItems=(props)=>{
     const [title,setTitle]=useState(props.title)
     
@@ -19,7 +21,7 @@ const ExpenseItems=(props)=>{
         <ExpenseDate date={props.date}></ExpenseDate>
 
          <ExpenseDetials title={title}
-              amount={amount}></ExpenseDetials>
+              amount={amount} place={props.place}></ExpenseDetials>
               <button onClick={clickevent}> change title</button>
         </Card>
       

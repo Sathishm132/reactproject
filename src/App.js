@@ -2,7 +2,7 @@ import ExpenseItems from "./component/expenses/ExpenseItems";
 import './component/expenses/ExpenseItem.css';
 import Card from "./component/uI/Card";
 import './component/expenses/expense.css'
-import Form from "./component/expenses/Vennila";
+import NewExpense from "./component/EventExpense/NewExpenses";
 const App=()=> {
   const expenses = [
     {
@@ -28,14 +28,19 @@ const App=()=> {
       place:"tamilnadu",
     },
   ];
-  
+  const add=expense=>{
+    console.log(expense)
+
+  }
   return (
     <div>
       <h2>Let's get started!</h2>
       
       
       <Card className="expense">
-      <Form className="expense-item"></Form>
+        
+   
+      <NewExpense onadd={add}></NewExpense>
       <ExpenseItems title={expenses[0].title}
       amount={expenses[0].amount}
       date={expenses[0].date}
@@ -52,6 +57,7 @@ const App=()=> {
       amount={expenses[3].amount}
       date={expenses[3].date}
       place={expenses[3].place}></ExpenseItems>
+      
       
       
       </Card>
