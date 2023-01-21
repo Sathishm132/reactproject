@@ -1,5 +1,5 @@
 import Form from "./NewExpenseform";
-import './NewForm.css';
+import './NewExpense.css';
 const NewExpense=(props)=>{
     const entereddata=(enteredexpense)=>{
         const expensedata={
@@ -11,9 +11,15 @@ const NewExpense=(props)=>{
        // console.log(expensedata)
     }
     return(
-        <div className="form">
+        <div className="new-expense">
             <Form onsave={entereddata}></Form>
         </div>
+      
     )
+        
+    
+
+  
+    
 }
 export default NewExpense
