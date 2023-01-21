@@ -1,6 +1,7 @@
 
 import React ,{useState}from "react"
 import ExpenseItems from "./ExpenseItems"
+import Expenselist from "./Expenselist";
 import Filter from "./FilterComponent"
 const Expense=(props)=>{
       //console.log(props)
@@ -12,6 +13,7 @@ const Expense=(props)=>{
     const FilteredExpense=props.Data.filter(fexpensed=>{
       return (fexpensed.date.getFullYear().toString()===filteredYear)
     })
+    
 
 
       return(
@@ -19,11 +21,9 @@ const Expense=(props)=>{
              <Filter
              selected={filteredYear}
              onChangeFilter={filterevent}></Filter>
-            {FilteredExpense.map(expense=><ExpenseItems 
-            key={expense.id}
-            title={expense.title}
-            amount={expense.amount}
-            date={expense.date}/>)}
+             <Expenselist item={FilteredExpense}></Expenselist>
+             
+            
             </div>
         
       

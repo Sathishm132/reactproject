@@ -20,7 +20,7 @@ const ExpenseItems=(props)=>{
         <Card className='expense-item '>
           <ExpenseDate date={props.date}></ExpenseDate>   
 
-         <ExpenseDetials tittle={props.title}
+         <ExpenseDetials title={props.title}
          amount={props.amount}
               ></ExpenseDetials>
               {/* <button onClick={clickevent}> change title</button> */}
