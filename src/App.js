@@ -59,7 +59,7 @@ const App=()=> {
       
       
       <Card className="expense">
-      <Filter></Filter>
+     
      
       
       
