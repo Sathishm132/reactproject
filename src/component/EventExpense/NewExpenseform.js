@@ -2,7 +2,7 @@ import '../expenses/ExpenseItem.css'
 import React,{useState} from 'react'
 import './NewForm.css'
 
-const Form=(probs)=>{
+const Form=(props)=>{
     const [newdate,setDate]= useState('')
    const [newTitle,setTitle]= useState('')
    const [newAmount,setAmount]= useState('')
@@ -52,7 +52,7 @@ const Form=(probs)=>{
        date:new Date(newdate),
        amount:newAmount
    }
-   probs.onsave(expenseData)
+   props.onsave(expenseData)
 
    setAmount("")
    setDate("")
@@ -79,8 +79,10 @@ const Form=(probs)=>{
            
         <div className='new-expense__actions'>
         
-        <button type='submit'>Add Expense</button>
+        <button type='submit' onClick={props.oncancel}>Cancel</button>
+        <button type='submit' >Add Expense</button>
       </div>
+      
     
 
 
